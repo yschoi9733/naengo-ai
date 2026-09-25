@@ -3,6 +3,10 @@
 Naengo AI는 냉장고 속 재료, 사용자 취향, 대화 맥락을 바탕으로 레시피를 추천하는
 FastAPI 기반 AI 요리 어시스턴트 서버입니다.
 
+> 서울시립대 2026 캡스톤디자인 4팀 프로젝트
+> [2026-UOS-Capstone-Design-Team-4/naengo-ai](https://github.com/2026-UOS-Capstone-Design-Team-4/naengo-ai)에서
+> 개발한 AI 서버를 개인 레포로 옮겨 이어서 개선하고 있습니다. 캡스톤 당시 상태는 원본 레포에 그대로 남아 있습니다.
+
 ## 주요 기능
 
 - **AI 레시피 추천**: PydanticAI 에이전트가 사용자 입력을 분석하고 레시피 추천, 일반 대화, 프로필 갱신 흐름으로 라우팅합니다.
@@ -54,6 +58,9 @@ uv run python scripts/eval/run_agent_evals.py --mode retrieval --with-db
 `--update-baseline`을 명시해야만 갱신됩니다.
 
 ## 배포 현황
+
+> 아래는 캡스톤 운영 당시의 배포 구성입니다. 이 레포에서는 팀 EC2로 배포하는
+> `deploy.yml` 워크플로를 제거했고, `deploy.sh`와 `docker-compose.prod.yml`은 참고용으로 남겨 두었습니다.
 
 - `main` 브랜치에 push되면 GitHub Actions가 Docker 이미지를 빌드해 GHCR(`ghcr.io`)에 push한 뒤 EC2에 SSH로 접속해 배포합니다.
 - 서버에서는 `~/naengo-deploy`의 `docker-compose.prod.yml`과 `deploy.sh`로 Blue-Green 무중단 배포를 수행합니다. 운영 서버에서 애플리케이션 이미지를 직접 빌드하거나 전체 git repo를 유지하지 않습니다.
