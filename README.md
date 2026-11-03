@@ -5,7 +5,7 @@ FastAPI 기반 AI 요리 어시스턴트 서버입니다.
 
 > 서울시립대 2026 캡스톤디자인 4팀 프로젝트
 > [2026-UOS-Capstone-Design-Team-4/naengo-ai](https://github.com/2026-UOS-Capstone-Design-Team-4/naengo-ai)에서
-> 개발한 AI 서버를 개인 레포로 옮겨 이어서 개선하고 있습니다. 캡스톤 당시 상태는 원본 레포에 그대로 남아 있습니다.
+> 개발한 AI 서버를 개인 레포로 옮겨 정리해 두었습니다. 캡스톤 당시 상태는 원본 레포에 그대로 남아 있습니다.
 
 ## 주요 기능
 
@@ -22,8 +22,8 @@ FastAPI 기반 AI 요리 어시스턴트 서버입니다.
 - **관리자 API**: 관리자 레시피 목록, 제출 레시피 검수, 채팅방 삭제 기능을 제공합니다.
 - **데이터 수집/정제**: 만개의레시피를 수집, 파싱, 검수, import하는 CLI 흐름을 제공합니다.
 - **Live Research**: 설정이 켜진 경우 외부 검색 결과를 추천 보조 정보로 활용합니다.
-- **Agent Evaluation**: 50개 golden case로 intent, routing, retrieval, safety,
-  LLM judge 품질을 평가합니다.
+- **Agent Evaluation (미완성)**: 50개 golden case로 intent, routing, retrieval, safety,
+  LLM judge 품질을 평가하려던 도구로, 캡스톤 막바지에 만들다 멈췄습니다([AI Agent 평가](#ai-agent-평가) 참고).
 
 ## 기술 스택
 
@@ -41,6 +41,9 @@ FastAPI 기반 AI 요리 어시스턴트 서버입니다.
 - **CI/CD**: GitHub Actions
 
 ## AI Agent 평가
+
+> **미완성:** 캡스톤 막바지에 만들다 멈춘 평가 도구입니다. 케이스와 채점을 끝까지 다듬지 못해
+> 지금은 제대로 동작하지 않을 수 있습니다. 아래 명령은 만들 당시의 사용법입니다.
 
 ```powershell
 # PR용 결정론적 평가
